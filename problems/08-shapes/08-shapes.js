@@ -21,5 +21,41 @@ Example for printShape("Diamond", 5, "*");
   * 
 */
 function printShape(shape, height, character) {
+
+  //Exceptions
+  if(shape !== "square" || "Square" || "triangle" || "Triangle" || "diamond" || "Diamond"){
+    throw "Not a valid shape. Shape's can only be a square, triangle, or diamond. Try again."
+  }
+
+  if(Number.isInteger(height) === false){
+    throw "Not an integer, try again."
+  }
+
+  if(character.constructor !== String){
+    throw "Not a string, try again."
+  }
+
+  if(character.length !== 1){
+    throw "Input can only be a string of length 1, try again."
+  }
+
+  //Functions
+  if(shape === "square" || "Square"){
+    
+  }
+
+  if(shape === "triangle" || "Triangle"){
+  
+  }
+
+  if(shape === "diamond" || "Diamond"){
+  
+  }
   
 }
+
+a = "h"
+console.log(a.length === 1);
+
+//console.log(printShape("square"), 5, "$");
+
