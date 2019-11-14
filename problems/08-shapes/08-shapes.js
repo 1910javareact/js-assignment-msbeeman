@@ -23,7 +23,7 @@ Example for printShape("Diamond", 5, "*");
 function printShape(shape, height, character) {
 
   //Exceptions
-  if(shape !== "square" || "Square" || "triangle" || "Triangle" || "diamond" || "Diamond"){
+  if(shape !== "square" && shape !== "Square" && shape !== "triangle" && shape !== "Triangle" && shape !== "diamond" && shape !== "Diamond"){
     throw "Not a valid shape. Shape's can only be a square, triangle, or diamond. Try again."
   }
 
@@ -40,22 +40,33 @@ function printShape(shape, height, character) {
   }
 
   //Functions
-  if(shape === "square" || "Square"){
-    
-  }
+  let charArray = []
+  let logArray = []
 
-  if(shape === "triangle" || "Triangle"){
-  
+  switch (shape) {
+    case "square": 
+    case "Square": {
+      for(let i = 0; i < height; i++){
+        charArray.push(character)
+      }
+      for(let j = 0; j < height; j++){
+        logArray.push(console.log(`${charArray}`))
+      }
+      
+      break;
+    }
+    case "triangle":
+    case "Triangle": {
+      break;
+    }
+    case "diamond":
+    case "Diamond": {
+      break;
+    }
   }
-
-  if(shape === "diamond" || "Diamond"){
-  
-  }
-  
 }
 
-a = "h"
-console.log(a.length === 1);
 
-//console.log(printShape("square"), 5, "$");
+console.log(printShape("Square", 3, "%"));
+
 
