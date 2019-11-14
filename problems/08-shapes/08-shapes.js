@@ -47,10 +47,10 @@ function printShape(shape, height, character) {
     case "square": 
     case "Square": {
       for(let i = 0; i < height; i++){
-        charArray.push(character)
+        charArray = charArray + character
       }
       for(let j = 0; j < height; j++){
-        logArray.push(console.log(`${charArray}`))
+        logArray.push(console.log(charArray))
       }
       
       break;
