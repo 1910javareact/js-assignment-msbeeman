@@ -4,13 +4,16 @@ Return the nth number in the fibonacci sequence. */
 function fib(n){
     //Type Checking
     if(isNaN(n)){
-        throw "This is not a valid number"
+        throw new Error("This is not a valid number")
     }
     if(n < 0){
         throw new Error('n must be greater than 0')
     }
     if((n === Infinity) || (n === -Infinity)){
-        throw "n cannot be infinity"
+        throw new Error("n cannot be infinity")
+    }
+    if((Number.isInteger(n) === false)){
+        throw new Error("Please enter in an integer.")
     }
 
     //Base Cases
