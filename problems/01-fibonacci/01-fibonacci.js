@@ -9,7 +9,7 @@ function fib(n){
     if(n < 0){
         throw new Error('n must be greater than 0')
     }
-    if(n === Infinity){
+    if((n === Infinity) || (n === -Infinity)){
         throw "n cannot be infinity"
     }
 
