@@ -37,7 +37,3 @@ function spliceElement(someArr, index) {
 
     return arr
 }
-
-
-
-
