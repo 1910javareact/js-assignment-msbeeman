@@ -46,7 +46,6 @@ function isPalindrome(someStr) {
 
         console.log("This word contains an off amount of letters...");
         
-
         firstHalf = str.slice(0, str.length/2 + 0.5)
         secondHalf = str.slice(str.length/2 - 0.5)
         
