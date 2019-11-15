@@ -15,10 +15,6 @@ function isEven(someNum) {
     if((someNum === Infinity) || (someNum === -Infinity)){
         throw new Error("Infiniti is not a number, try again.")
     }
-    if(Number.isInteger(someNum.toPrecision(100)) === false){
-        throw new Error("Please enter a whole number, try again.")
-    }
-    
 
     let num = someNum
 
@@ -29,3 +25,4 @@ function isEven(someNum) {
     }
 
 }
+
