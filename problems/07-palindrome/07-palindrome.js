@@ -13,7 +13,6 @@ function isPalindrome(someStr) {
     }
  
     
-    
     let str = someStr.toLowerCase();
     let firstHalf;
     let secondHalf;
