@@ -24,19 +24,19 @@ function printShape(shape, height, character) {
 
   //Exceptions
   if(shape !== "square" && shape !== "Square" && shape !== "triangle" && shape !== "Triangle" && shape !== "diamond" && shape !== "Diamond"){
-    throw "Not a valid shape. Shape's can only be a square, triangle, or diamond. Try again."
+    throw new Error("Not a valid shape. Shape's can only be a square, triangle, or diamond. Try again.")
   }
-
   if(Number.isInteger(height) === false){
-    throw "Not an integer, try again."
+    throw new Error("Not an integer, try again.")
   }
-
+  if(Number.isInteger(height/2) === true){
+    throw new Error("Height input must be odd, try again.")
+  }
   if(character.constructor !== String){
-    throw "Not a string, try again."
+    throw new Error("Not a string, try again.")
   }
-
   if(character.length !== 1){
-    throw "Input can only be a string of length 1, try again."
+    throw new Error("Input can only be a string of length 1, try again.")
   }
 
 
@@ -109,12 +109,5 @@ function printShape(shape, height, character) {
     }
   }
 }
-
-
-console.log(printShape("Square", 3, "%"));
-console.log(printShape("Triangle", 3, "$"));
-console.log(printShape("Diamond", 5, "*"));
-
-
 
 
