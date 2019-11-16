@@ -1,7 +1,7 @@
 /* 8. Shapes
 Define function: printShape(shape, height, character)
 shape is a String and is either "Square", "Triangle", "Diamond".
-height is a Number and is the height of the shape. Assume the number is odd.
+height is a Number and is the height of the shape. Assume the number is odd.*****************
 character is a String that represents the contents of the shape. Assume this String contains just one character.
 Use a switch statement to determine which shape was passed in.
 Use the console.log function to print the desired shape.
@@ -39,25 +39,38 @@ function printShape(shape, height, character) {
     throw "Input can only be a string of length 1, try again."
   }
 
+
   //Functions
-  let charArray = []
-  let logArray = []
+  let charArray = ""
 
   switch (shape) {
     case "square": 
     case "Square": {
+
+      //Create the row
       for(let i = 0; i < height; i++){
         charArray = charArray + character
       }
+
+      //Output each row
       for(let j = 0; j < height; j++){
-        logArray.push(console.log(charArray))
+        console.log(charArray);
       }
       
-      break;
+      return  ""
+
     }
     case "triangle":
     case "Triangle": {
-      break;
+
+      
+      for(let i = 0; i < height; i++){
+        charArray = charArray + character
+        console.log(charArray);
+       }
+
+       return ""
+
     }
     case "diamond":
     case "Diamond": {
@@ -68,5 +81,7 @@ function printShape(shape, height, character) {
 
 
 console.log(printShape("Square", 3, "%"));
+console.log(printShape("Triangle", 3, "$"));
+
 
 
